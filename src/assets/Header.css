@@ -1,0 +1,85 @@
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: rgba(255, 106, 0, 0.774);
+}
+
+.container {
+    width: 1280px;
+    margin: auto;
+}
+
+.nav_checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+}
+
+.tab-nav {
+    outline: none;
+    display: none;
+}
+
+.label {
+    display: none;
+    color: white;
+}
+
+.burger {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+.content_nav {
+    grid-column: 3;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content_nav li {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.content_nav a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.content_nav li a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform-origin: right;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 0.5s;
+     
+}
+
+.content_nav li a:hover::after {
+    transform: scale(1, 1);
+}
+
+.content_section {
+    height: 120vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
