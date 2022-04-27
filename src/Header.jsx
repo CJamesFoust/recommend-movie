@@ -19,10 +19,6 @@ export default function Header() {
                     </label>
 
                     <ul className="content_nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Login</a></li>
                     </ul>
 
                 </nav>

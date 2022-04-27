@@ -3,7 +3,8 @@ header {
     top: 0;
     z-index: 1;
     width: 100%;
-    background-color: rgba(255, 106, 0, 0.774);
+    background-color: rgba(71, 71, 71, 0.434);
+    box-shadow: 0px -5px 25px black;
 }
 
 .container {
