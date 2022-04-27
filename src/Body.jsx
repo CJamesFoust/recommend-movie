@@ -6,10 +6,10 @@ export default function Body() {
 
     const [ movieList, setMovieList ] = useState([]);
     const [ genre, setGenre] = useState(28);
-    const [ poster, setPoster ] = useState('https://image.tmdb.org/t/p/w500//1g0dhYtq4irTY1GPXvft6k4YLjm.jpg');
-    const [ title, setTitle ] = useState('Spider-Man: No Way Home')
-    const [ overview, setOverview ] = useState('Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.')
-    const [ voteAverage, setVoteAverage ] = useState(7.8); 
+    const [ poster, setPoster ] = useState('');
+    const [ title, setTitle ] = useState('')
+    const [ overview, setOverview ] = useState('')
+    const [ voteAverage, setVoteAverage ] = useState(0.0); 
 
     const genreChange = (e) => {
         setGenre(parseInt(e.target.value));
@@ -42,8 +42,6 @@ export default function Body() {
         setVoteAverage(movieList[i].vote_average);
         return;
     }
-
-    // overview, title, vote average
 
     return (
         <div className="bodyContainer">
@@ -87,11 +85,6 @@ export default function Body() {
                             return <img key={i} src={`https://image.tmdb.org/t/p/w500/${item.poster_path }`} className="poster item" onClick={ () => changeDescriptionContent(parseInt(i)+10) } />
                         })}
                 </div>
-                {/* <ul>
-                    {movieList.map((item, i) => {
-                        return <li key={i}>{ item.title }</li>
-                    })}
-                </ul> */}
             </div>
         </div>
     );
